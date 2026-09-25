@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson · Claude Code Trainer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Claude Code Trainer</a>
+  </header>
+
+  <main class="container">
+    <p><a href="index.html">← All lessons</a></p>
+    <p id="error" class="error" hidden></p>
+
+    <article id="lesson" class="lesson"></article>
+
+    <section id="quiz-section" hidden>
+      <h2>Quiz</h2>
+      <p id="quiz-status" class="muted"></p>
+      <form id="quiz"></form>
+      <p id="result" class="result" hidden></p>
+    </section>
+
+    <nav id="pager" class="pager"></nav>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@18.0.14/lib/marked.umd.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/lesson.js"></script>
+</body>
+</html>

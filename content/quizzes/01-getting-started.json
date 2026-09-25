@@ -1,0 +1,44 @@
+{
+  "lesson": "01-getting-started",
+  "questions": [
+    {
+      "question": "How do you start an interactive Claude Code session in your project?",
+      "options": [
+        "Run claude in a terminal opened in the project folder",
+        "Open index.html in a browser",
+        "Run pip install claude",
+        "Type /start in any terminal"
+      ],
+      "answer": "Run claude in a terminal opened in the project folder",
+      "explanation": "Running claude in a folder starts a session scoped to that project."
+    },
+    {
+      "question": "What happens when you type ! python --version as a prompt?",
+      "options": [
+        "Claude writes a Python script",
+        "The shell runs the command and its output appears in the conversation",
+        "Claude Code opens its settings",
+        "Nothing, because ! is not allowed"
+      ],
+      "answer": "The shell runs the command and its output appears in the conversation",
+      "explanation": "The ! prefix runs a shell command directly, and Claude can see the output."
+    },
+    {
+      "question": "Which command lists the available slash commands?",
+      "options": ["/help", "/clear", "/config", "!help"],
+      "answer": "/help",
+      "explanation": "/help lists commands. /clear resets the conversation and /config opens settings."
+    },
+    {
+      "question": "What does Claude do in plan mode?",
+      "options": [
+        "Edits files as fast as possible",
+        "Reads and researches, then presents a plan for approval before making edits",
+        "Deletes the conversation history",
+        "Runs only your test suite"
+      ],
+      "answer": "Reads and researches, then presents a plan for approval before making edits",
+      "explanation": "Plan mode is read-only until you approve the plan."
+    }
+  ]
+}
