@@ -111,7 +111,8 @@ def check_manifest(lesson_ids, quiz_ids, errors):
 
 def main():
     errors = []
-    lesson_ids = {p.stem for p in LESSONS_DIR.glob("*.md")}
+    # CLAUDE.md holds authoring conventions for Claude Code, not a lesson.
+    lesson_ids = {p.stem for p in LESSONS_DIR.glob("*.md") if p.name != "CLAUDE.md"}
     quiz_paths = sorted(QUIZZES_DIR.glob("*.json"))
     quiz_ids = {p.stem for p in quiz_paths}
 

@@ -3,5 +3,10 @@
     "id": "01-getting-started",
     "title": "Getting started with Claude Code",
     "summary": "Install Claude Code, start a session, run shell commands with !, use slash commands, and plan before you build."
+  },
+  {
+    "id": "02-permission-modes",
+    "title": "Permission modes",
+    "summary": "Learn the Manual, Edit automatically, Plan and Auto modes, and switch between them with Shift+Tab."
   }
 ]

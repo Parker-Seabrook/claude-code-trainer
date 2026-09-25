@@ -2,43 +2,42 @@
   "lesson": "01-getting-started",
   "questions": [
     {
-      "question": "How do you start an interactive Claude Code session in your project?",
-      "options": [
-        "Run claude in a terminal opened in the project folder",
-        "Open index.html in a browser",
-        "Run pip install claude",
-        "Type /start in any terminal"
-      ],
-      "answer": "Run claude in a terminal opened in the project folder",
-      "explanation": "Running claude in a folder starts a session scoped to that project."
+      "question": "You open a terminal in your project folder and want Claude's help with the code there. What do you type?",
+      "options": ["claude", "! claude", "/start", "/help"],
+      "answer": "claude",
+      "explanation": "Running claude in a folder starts a session scoped to that project. /help only works once a session is running, and there is no /start command."
     },
     {
-      "question": "What happens when you type ! python --version as a prompt?",
-      "options": [
-        "Claude writes a Python script",
-        "The shell runs the command and its output appears in the conversation",
-        "Claude Code opens its settings",
-        "Nothing, because ! is not allowed"
-      ],
-      "answer": "The shell runs the command and its output appears in the conversation",
-      "explanation": "The ! prefix runs a shell command directly, and Claude can see the output."
+      "question": "In a session, you want to check your Python version yourself and let Claude see the result. What do you type?",
+      "options": ["! python --version", "/python --version", "!! python --version"],
+      "answer": "! python --version",
+      "explanation": "One ! runs the rest of the line in the shell, and the output lands in the conversation. A / starts a Claude Code command, and a second ! gets passed to the shell."
     },
     {
-      "question": "Which command lists the available slash commands?",
-      "options": ["/help", "/clear", "/config", "!help"],
-      "answer": "/help",
-      "explanation": "/help lists commands. /clear resets the conversation and /config opens settings."
+      "question": "You typed ! and then pasted a line that starts with its own !. The shell replies \"command not found\". Why?",
+      "options": [
+        "The shell received a command starting with !",
+        "Python is not installed",
+        "Shell commands are blocked in this mode"
+      ],
+      "answer": "The shell received a command starting with !",
+      "explanation": "Claude Code removes only the first !, so the shell received !python --version, which isn't a command."
     },
     {
-      "question": "What does Claude do in plan mode?",
+      "question": "You've finished one task and want to start an unrelated one without the old conversation getting in the way. Which command do you run?",
+      "options": ["/clear", "/config", "/help"],
+      "answer": "/clear",
+      "explanation": "/clear starts a fresh conversation. /config opens settings, and /help lists commands."
+    },
+    {
+      "question": "You want Claude to add a login page to your app, and you want to check its approach before any files change. What should you do?",
       "options": [
-        "Edits files as fast as possible",
-        "Reads and researches, then presents a plan for approval before making edits",
-        "Deletes the conversation history",
-        "Runs only your test suite"
+        "Switch to plan mode and review the plan",
+        "Let Claude build it, then review the diff",
+        "Run /clear before asking"
       ],
-      "answer": "Reads and researches, then presents a plan for approval before making edits",
-      "explanation": "Plan mode is read-only until you approve the plan."
+      "answer": "Switch to plan mode and review the plan",
+      "explanation": "In plan mode Claude only reads and researches, then waits for you to approve its plan before editing anything. Reviewing the diff afterwards means the files have already changed."
     }
   ]
 }
