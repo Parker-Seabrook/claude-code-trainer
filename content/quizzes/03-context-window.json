@@ -1,0 +1,47 @@
+{
+  "lesson": "03-context-window",
+  "questions": [
+    {
+      "question": "An hour into a session, Claude seems to have forgotten details from early on. You want to see what is using up its working space. What do you run?",
+      "options": ["/context", "/compact", "/clear", "/config"],
+      "answer": "/context",
+      "explanation": "/context shows how full the context window is and what each category, such as tools, memory files and messages, takes up. /compact and /clear change the conversation instead of showing it, and /config opens settings."
+    },
+    {
+      "question": "You're halfway through a refactor and the context window is nearly full. You want to keep going on the same task. What should you do?",
+      "options": [
+        "Run /compact and say what to keep",
+        "Run /clear and start again",
+        "Paste the full log so Claude has everything"
+      ],
+      "answer": "Run /compact and say what to keep",
+      "explanation": "/compact replaces the conversation with a summary, so you keep the decisions and progress and free the space. /clear throws the conversation away, and pasting more text fills the window further."
+    },
+    {
+      "question": "Early in a session you told Claude \"always use tabs in this project\". After a compaction, it starts using spaces. What is the most reliable fix?",
+      "options": [
+        "Add the rule to CLAUDE.md",
+        "Repeat the rule after every compaction",
+        "Turn off automatic compaction"
+      ],
+      "answer": "Add the rule to CLAUDE.md",
+      "explanation": "Chat messages survive compaction only as part of a summary, and details can be lost. CLAUDE.md is reloaded from disk after compaction, so a rule there comes back word for word."
+    },
+    {
+      "question": "You asked Claude to read every file in a large folder \"just in case\". What is the cost?",
+      "options": [
+        "The files take up context window space",
+        "Claude can edit those files without asking",
+        "The files are added to CLAUDE.md"
+      ],
+      "answer": "The files take up context window space",
+      "explanation": "Everything Claude reads stays in the context window until it's compacted or cleared, leaving less room for the work you actually need. Reading a file doesn't change permissions or CLAUDE.md."
+    },
+    {
+      "question": "You've finished a bug fix and want to start an unrelated feature. Which command fits best?",
+      "options": ["/clear", "/compact", "/context"],
+      "answer": "/clear",
+      "explanation": "/clear starts a fresh conversation, which suits unrelated work. /compact keeps a summary of the old task you no longer need, and /context only shows usage."
+    }
+  ]
+}
