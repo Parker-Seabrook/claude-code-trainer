@@ -9,17 +9,17 @@
         "Claude writes a plan and stops"
       ],
       "answer": "Claude asks before editing the file",
-      "explanation": "Manual mode lets Claude read files freely, but every edit and every shell command needs your approval."
+      "explanation": "Manual mode lets Claude read files and run read-only commands freely, but every file edit needs your approval."
     },
     {
       "question": "In Edit automatically mode, Claude has changed three files and now wants to run your tests. What happens?",
       "options": [
         "Claude asks before running the tests",
         "Claude runs the tests without asking",
-        "Claude switches to Plan mode first"
+        "Claude runs the tests without asking if they're inside the project"
       ],
       "answer": "Claude asks before running the tests",
-      "explanation": "Edit automatically covers file edits and basic file commands such as mkdir and mv. Running tests is a different shell command, so it still needs your approval."
+      "explanation": "Edit automatically covers file edits and basic file commands such as mkdir and mv inside your project. Running tests is a different kind of shell command, so it still needs your approval wherever the tests live."
     },
     {
       "question": "You want Claude to study a project you've never seen and propose how to restructure it, changing nothing yet. Which mode fits best?",
@@ -32,10 +32,10 @@
       "options": [
         "The mode shown under the prompt box",
         "Whether you ran /clear",
-        "Whether the files are open in an editor"
+        "Whether the files are inside your project folder"
       ],
       "answer": "The mode shown under the prompt box",
-      "explanation": "A mode that edits without asking, such as Edit automatically or Auto, is probably on. Shift+Tab may have switched it without you noticing."
+      "explanation": "A mode that edits without asking, such as Edit automatically or Auto, is probably on. Shift+Tab may have switched it without you noticing, or the session may have started in Auto."
     },
     {
       "question": "Claude is on a long task in Auto mode and starts heading in the wrong direction. What do you do?",
