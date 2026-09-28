@@ -10,7 +10,7 @@ Each of these takes up space in the context window:
 - Files Claude reads, in full
 - Output from commands, including anything you run with `!`
 - Your `CLAUDE.md` files, which are instructions Claude Code loads at the start of every session
-- Tool definitions, such as those from connected MCP servers (add-ons that give Claude extra tools)
+- Definitions of Claude Code's built-in tools. Tools from MCP servers (add-ons that give Claude extra tools) load on demand, so they take almost no space until Claude uses them.
 
 The rule: anything Claude sees stays in the window until the conversation is cleared or compacted. A common mistake is pasting a huge log or asking Claude to read a whole folder "just in case". It works, but it uses space you may need later.
 
